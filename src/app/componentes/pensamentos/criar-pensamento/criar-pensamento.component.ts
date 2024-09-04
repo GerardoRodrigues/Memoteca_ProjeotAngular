@@ -10,7 +10,6 @@ import { Router } from '@angular/router';
 })
 export class CriarPensamentoComponent{
   pensamento: Pensamento = {
-    id: '',
     conteudo: '',
     autoria: '',
     modelo: ''
