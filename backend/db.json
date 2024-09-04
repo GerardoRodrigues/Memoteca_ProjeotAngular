@@ -1,22 +1,16 @@
 {
   "pensamentos": [
     {
-      "id": 1,
+      "id": "1",
       "conteudo": "Que bom que voce veio",
       "autoria": "Lucas",
       "modelo": "modelo1"
     },
     {
-      "id": 2,
+      "id": "2",
       "conteudo": "Que noticia boa",
       "autoria": "Pedro Neves",
       "modelo": "modelo2"
-    },
-    {
-      "id": 3,
-      "conteudo": "Estudando front-end com angular",
-      "autoria": "Augusto Soares",
-      "modelo": "modelo3"
     },
     {
       "id": "1be7",
@@ -25,9 +19,9 @@
       "modelo": "modelo3"
     },
     {
-      "id": "decc",
-      "conteudo": "Mais um teste",
-      "autoria": "Dev teste",
+      "id": "",
+      "conteudo": "Teste de pensamento",
+      "autoria": "Dev angular",
       "modelo": "modelo2"
     }
   ]
