@@ -14,4 +14,8 @@ export class PensamentoService {
   listar(): Observable<Pensamento[]>{
     return this.htpp.get<Pensamento[]>(this.apiUrl);
   }
+
+  criar(pensamento: Pensamento):Observable<Pensamento>{
+    return this.htpp.post<Pensamento>(this.apiUrl, pensamento);
+  }
 }

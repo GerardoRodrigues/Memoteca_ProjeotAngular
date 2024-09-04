@@ -13,6 +13,6 @@ export class ListarPensamentoComponent implements OnInit{
   constructor(private service: PensamentoService){}
 
   ngOnInit(): void {
-      this.service.listar().subscribe((pensamento) => this.listaPensamentos = pensamento);
+      this.service.listar().subscribe((pensamentos) => this.listaPensamentos = pensamentos);
   }
 }
