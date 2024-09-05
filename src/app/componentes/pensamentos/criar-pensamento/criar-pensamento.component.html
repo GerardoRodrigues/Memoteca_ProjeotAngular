@@ -5,10 +5,22 @@
     <form [formGroup]="formulario">
         <label for="pensamento">Pensamento</label>
         <textarea id="pensamento" class="input" formControlName="conteudo" placeholder="Digite o pensamento"></textarea>
+        <div class="mensagem__erro" *ngIf="formulario.get('conteudo')?.errors && formulario.get('conteudo')?.touched">
+            <p *ngIf="formulario.get('conteudo')?.errors?.['required']">Pensamento é obrigatório!</p>
+            <p *ngIf="formulario.get('conteudo')?.errors?.['pattern']">Não pode conter apenas espaçoes em branco!</p>
+            <p *ngIf="formulario.get('conteudo')?.errors?.['minlength']">Mínimo de 5 caracteres!</p>
+        </div>
+
         <label for="autoria">Atutoria ou fonte</label>
         <input type="text" id="autoria" class="input" formControlName="autoria" placeholder="Digite a fonte ou autoria">
+        <div class="mensagem__erro" *ngIf="formulario.get('autoria')?.errors && formulario.get('autoria')?.touched">
+            <p *ngIf="formulario.get('autoria')?.errors?.['required']">Autoria é obrigatório!</p>
+            <p *ngIf="formulario.get('autoria')?.errors?.['minlength']">Mínimo de 3 caracteres!</p>
+        </div>
+
         <label for="modelo">Selecione o moledo do card:</label>
         <div class="container-radio">
+
             <div class="radio-modelo">
                 <label for="modelo1">
                     <input type="radio" formControlName="modelo" id="modelo1" value="modelo1">
@@ -57,6 +69,7 @@
                 </div>
             </div>
         </div>
+
         <div class="acoes">
             <button (click)="criarPensamento()" class="botao">Salvar</button>
             <button (click)="cancelarPensamento()" class="botao">Cancelar</button>
