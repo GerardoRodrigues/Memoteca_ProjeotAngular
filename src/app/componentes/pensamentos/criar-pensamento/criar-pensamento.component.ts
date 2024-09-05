@@ -20,7 +20,7 @@ export class CriarPensamentoComponent implements OnInit{
         conteudo: ['', Validators.compose([
           Validators.required,
           Validators.minLength(5),
-          Validators.pattern(/(.|\s)*\S(.|\s)*/)]),
+          Validators.pattern(/(.|\s)*\S(.|\s)*/)])
         ],
         autoria: ['', Validators.compose([
           Validators.required, 
@@ -28,6 +28,13 @@ export class CriarPensamentoComponent implements OnInit{
         ])],
         modelo: ['modelo1']
       })
+  }
+
+  habilitarBotao():string{
+    if(this.formulario.valid){
+      return 'botao';
+    }
+    return 'botao__desabilitado';
   }
 
   criarPensamento(){

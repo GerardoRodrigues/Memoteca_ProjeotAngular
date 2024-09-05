@@ -45,11 +45,32 @@ h2 {
   border: 2px solid #154580;
   border-radius: 10px;
   transition: 0.5s ease;
+  cursor: pointer;
 }
 
 .botao:hover {
   border: 2px solid #84EEC1;
   color: #84EEC1;
+}
+
+.botao__desabilitado{
+  background: #7a7f87;
+  color: #ffffff;
+  max-width: 270px;
+  width: 250;
+  padding: 1rem;
+  margin: 0 auto;
+  border: 2px solid #c4c4c4;
+  border-radius: 10px;
+  transition: 0.5s ease;
+}
+
+.mensagem__erro{
+  font-size: 12px;
+  margin-left: 5px;
+  color: red;
+  margin-top: -25px;
+  margin-bottom: 20px;
 }
 
 @media (min-width: 576px) {
