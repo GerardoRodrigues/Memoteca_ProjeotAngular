@@ -13,13 +13,17 @@ export class PensamentoService {
 
   haMaisPensamento: boolean = true;
 
-  listar(pagina: number, filtro: string): Observable<Pensamento[]>{
+  listar(pagina: number, filtro: string, favoritos: boolean): Observable<Pensamento[]>{
     const itensPorPagina = 6;
 
     let params = new HttpParams().set("_page", pagina).set("_per_page", itensPorPagina);
 
-    if (filtro.trim().length > 2) {
+    if(filtro.trim().length > 2) {
       params = params.set("autoria", filtro);
+    }
+
+    if(favoritos){
+      params = params.set("favorito", true)
     }
 
     return this.http.get<any>(this.apiUrl, {params}).pipe(map(response => {

@@ -5,7 +5,7 @@
       "conteudo": "Que bom que voce veio",
       "autoria": "Lucas",
       "modelo": "modelo1",
-      "favorito": true
+      "favorito": false
     },
     {
       "id": "2",
@@ -19,14 +19,14 @@
       "conteudo": "Muito bom esse local",
       "autoria": "Rodz1n",
       "modelo": "modelo1",
-      "favorito": false
+      "favorito": true
     },
     {
       "id": "d629",
       "conteudo": "Teste divino",
       "autoria": "Chico",
       "modelo": "modelo3",
-      "favorito": true
+      "favorito": false
     },
     {
       "id": "9697",
@@ -40,7 +40,7 @@
       "conteudo": "Alou tudo bem ?",
       "autoria": "Mae",
       "modelo": "modelo1",
-      "favorito": true
+      "favorito": false
     },
     {
       "id": "a21b",
@@ -54,7 +54,7 @@
       "conteudo": "TEstando mais uma vez meu Jesus abençoa",
       "autoria": "Teste dinivo",
       "modelo": "modelo3",
-      "favorito": false
+      "favorito": true
     },
     {
       "id": "184e",
@@ -82,7 +82,7 @@
       "conteudo": "Teste",
       "autoria": "Dev",
       "modelo": "modelo1",
-      "favorito": false
+      "favorito": true
     },
     {
       "id": "9b60",

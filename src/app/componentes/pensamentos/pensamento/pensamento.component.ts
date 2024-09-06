@@ -14,7 +14,9 @@ export class PensamentoComponent {
     autoria: '',
     modelo: '',
     favorito: true
-  }
+  };
+
+  @Input() listaFavoritos: Pensamento[] = [];
 
   constructor(private service: PensamentoService){}
 
@@ -33,6 +35,6 @@ export class PensamentoComponent {
   }
 
   atualizarFavorito(){
-    this.service.mudarFavorito(this.pensamento).subscribe();
+    this.service.mudarFavorito(this.pensamento).subscribe(() => this.listaFavoritos.splice(this.listaFavoritos.indexOf(this.pensamento), 1));
   }
 }
