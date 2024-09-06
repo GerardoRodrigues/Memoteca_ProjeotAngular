@@ -26,7 +26,8 @@ export class EditarPensamentoComponent implements OnInit{
         Validators.required,
         Validators.minLength(3)
       ])],
-      modelo: ['']
+      modelo: [''],
+      favorito: [false]
     })
     const id = String(this.route.snapshot.paramMap.get('id'));
      this.service.buscarPorId(id).subscribe((formulario) => this.formulario.setValue(formulario));
