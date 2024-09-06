@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Pensamento } from './Pensamento';
 import { map, Observable } from 'rxjs';
-import { response } from 'express';
 
 @Injectable({
   providedIn: 'root'
@@ -11,11 +10,18 @@ export class PensamentoService {
   private readonly apiUrl = 'http://localhost:3000/pensamentos';
 
   constructor(private http: HttpClient) { }
+
   haMaisPensamento: boolean = true;
 
-  listar(pagina: number): Observable<Pensamento[]>{
+  listar(pagina: number, filtro: string): Observable<Pensamento[]>{
     const itensPorPagina = 6;
+
     let params = new HttpParams().set("_page", pagina).set("_per_page", itensPorPagina);
+
+    if (filtro.trim().length > 2) {
+      params = params.set("autoria", filtro);
+    }
+
     return this.http.get<any>(this.apiUrl, {params}).pipe(map(response => {
       if(response.next === null){
         this.haMaisPensamento = false;
