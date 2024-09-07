@@ -54,9 +54,8 @@ export class ListarPensamentoComponent implements OnInit{
     this.paginaAtual = 1;
     this.haMaisPensamentos = true;
     this.service.haMaisPensamento = true
+    this.titulo = 'Meu Mural';
 
-    this.router.routeReuseStrategy.shouldReuseRoute = () => false;
-    this.router.onSameUrlNavigation = 'reload';
     this.router.navigate([this.router.url]);
   }
 }
